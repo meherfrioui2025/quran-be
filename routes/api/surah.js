@@ -3,7 +3,6 @@ import Surah from "../../models/Surah.model.js";
 
 const router = express.Router();
 
-// ✅ Get current user profile
 router.get("/", async (req, res) => {
   try {
     const surahs = await Surah.find().sort({ number: 1 });
