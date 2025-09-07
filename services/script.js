@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Surah from "../models/Surah.model.js";
+import Surah from "../models/Surahs.model.js";
 import setupDB from "../utils/db.js";
 
 import data from "./surahs.js" 
