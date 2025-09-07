@@ -3,7 +3,7 @@ Islamic Daily Companion
 Stay spiritually connected every day with Islamic Daily Companion. This extension provides daily Islamic reminders and tools to support your faith, right from your browser.
 
 ✨ Features:
-📖 Daily Quran Verse – Displayed in Arabic, English, and French, with audio recitation.
+📖 Daily Quran Verse – Displayed in Arabic and English, with audio recitation.
 
 🤲 Daily Du’aa (Supplication) – Inspiring duaa to guide your day.
 
