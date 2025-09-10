@@ -5,6 +5,7 @@ import cors from "cors";
 import { port } from "./config/keys.js";
 import setupDB from "./utils/db.js";
 import routesURL from "./routes/index.js";
+import job from "./services/cron.js";
 
 config();
 
@@ -12,6 +13,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+
+job.start()
 
 setupDB();
 
