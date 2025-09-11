@@ -3,10 +3,12 @@ import apiRoutes from "./api/index.js";
 import { app } from "../config/keys.js";
 
 const { apiURL } = app;
-console.log('app')
+
 const api = `/${apiURL}`;
 const router = express.Router();
+
 // api routes
+router.get(apiURL,(req,res)=>"it is a live!")
 router.use(api, apiRoutes);
 router.use(api, (req, res) => res.status(404).json("No API route found"));
 
