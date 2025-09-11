@@ -14,20 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// Start cron
 job.start();
-console.log("Cron job started...");
 
-(async () => {
-  try {
-    await setupDB();
-    const server = app.listen(port, () => {
-      console.log(
-        `Listening on port ${port}. Visit http://localhost:${port}/ in your browser.`
-      );
-    });
-  } catch (err) {
-    console.error("Failed to connect to DB, server not started", err);
-    process.exit(1);
-  }
-})();
+setupDB();
+
+app.use(routesURL);
+
+const server = app.listen(port, () => {
+  console.log(
+    `Listening on port ${port}. Visit http://localhost:${port}/ in your browser.`
+  );
+});

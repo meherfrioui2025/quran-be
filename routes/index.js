@@ -9,7 +9,7 @@ const api = `/${apiURL}`;
 const router = express.Router();
 
 // api routes
-router.get( "/health",(req,res)=>res.json('It is a live!'))
+router.get("/health", (req, res) => res.json("It is a live!"));
 router.use(api, apiRoutes);
 router.use(api, (req, res) => res.status(404).json("No API route found"));
 
